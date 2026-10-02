@@ -1,0 +1,791 @@
+/* =====================================================
+   FAST TRAJET V2
+   ESPACE CLIENT
+   MOBILE FIRST
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f7fa;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.client-header {
+    height: 64px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo span {
+    margin-left: 5px;
+}
+
+.menu-button {
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 64px;
+    right: -280px;
+
+    width: 280px;
+    height: calc(100vh - 64px);
+
+    background: #ffffff;
+
+    box-shadow:
+        -5px 0 20px rgba(0, 0, 0, 0.12);
+
+    z-index: 2000;
+
+    padding: 20px;
+
+    transition: right 0.25s ease;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 8px;
+
+    border: none;
+
+    background: #f5f6f8;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.menu-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.menu-user small {
+    display: block;
+
+    color: #6b7280;
+
+    margin-top: 3px;
+}
+
+.logout-button {
+    margin-top: 20px !important;
+
+    background: #fee2e2 !important;
+
+    color: #b91c1c;
+}
+
+
+/* =====================================================
+   CONTENEUR
+===================================================== */
+
+.client-container {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 18px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.client-section {
+    display: none;
+}
+
+.client-section.active {
+    display: block;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.welcome-card {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-label {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.welcome-card h1 {
+    margin: 5px 0;
+
+    font-size: 27px;
+}
+
+.welcome-card p {
+    color: #6b7280;
+}
+
+.welcome-icon {
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.course-card,
+.map-card,
+.profile-card,
+.security-card,
+.course-active-container {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.card-title > span {
+    font-size: 28px;
+}
+
+.card-title h2 {
+    font-size: 18px;
+}
+
+.card-title p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   FORMULAIRE
+===================================================== */
+
+.field-group {
+    margin-bottom: 17px;
+}
+
+.field-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.field-group input {
+    width: 100%;
+
+    height: 50px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 12px;
+
+    padding: 0 14px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.field-group input:focus {
+    border-color: #2563eb;
+}
+
+.input-location {
+    display: flex;
+
+    gap: 7px;
+}
+
+.input-location input {
+    flex: 1;
+}
+
+.input-location button {
+    width: 50px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #eef2ff;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   INFORMATIONS TRAJET
+===================================================== */
+
+.trajet-informations {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.trajet-informations > div {
+    flex: 1;
+
+    background: #f3f4f6;
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    text-align: center;
+}
+
+.trajet-informations span {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   BOUTON PRINCIPAL
+===================================================== */
+
+.primary-button {
+    width: 100%;
+
+    min-height: 52px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-button:active {
+    transform: scale(0.98);
+}
+
+.primary-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   CARTE
+===================================================== */
+
+#map {
+    width: 100%;
+
+    height: 350px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER SECTION
+===================================================== */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.section-header > span {
+    font-size: 32px;
+}
+
+.section-header h1 {
+    font-size: 24px;
+}
+
+.section-header p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   ÉTAT VIDE
+===================================================== */
+
+.empty-state {
+    text-align: center;
+
+    padding: 40px 15px;
+}
+
+.empty-state > div {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.empty-state h2 {
+    font-size: 19px;
+
+    margin-bottom: 7px;
+}
+
+.empty-state p {
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   PROFIL
+===================================================== */
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 85px;
+    height: 85px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    color: #6b7280;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   SÉCURITÉ
+===================================================== */
+
+.security-item {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.security-item:last-child {
+    border-bottom: none;
+}
+
+.security-item > span {
+    font-size: 28px;
+}
+
+.security-item p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.notification {
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 15px;
+    right: 15px;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 14px 17px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    z-index: 5000;
+
+    transform: translateY(150px);
+
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   UTILITAIRES
+===================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   TABLETTE / ORDINATEUR
+===================================================== */
+
+@media (min-width: 768px) {
+
+    .client-header {
+        padding: 0 35px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: static;
+
+        width: 100%;
+
+        height: auto;
+
+        box-shadow: none;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 10px 30px;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        transition: none;
+    }
+
+    .menu-user {
+        margin: 0 auto 0 0;
+
+        padding: 0;
+
+        border: none;
+    }
+
+    .mobile-menu button {
+        width: auto;
+
+        margin: 0 !important;
+
+        padding: 11px 15px;
+    }
+
+    .client-container {
+        padding: 30px;
+    }
+
+    .notification {
+        left: auto;
+        right: 25px;
+
+        width: 350px;
+    }
+
+}
+
+/* ==============================================
+   MESSAGERIE COURSE
+============================================== */
+
+.chat-course-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chat-course-header {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.chat-course-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.chat-course-header p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.chat-messages {
+    height: 320px;
+    overflow-y: auto;
+    padding: 14px;
+    background: #f1f5f9;
+    border-radius: 14px;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-message.me {
+    justify-content: flex-end;
+}
+
+.chat-message.other {
+    justify-content: flex-start;
+}
+
+.chat-bubble {
+    max-width: 78%;
+    padding: 10px 13px;
+    border-radius: 15px;
+    word-break: break-word;
+}
+
+.chat-message.me .chat-bubble {
+    background: #2563eb;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-message.other .chat-bubble {
+    background: white;
+    color: #0f172a;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble p {
+    margin: 0 0 5px;
+}
+
+.chat-bubble small {
+    font-size: 11px;
+    opacity: 0.75;
+}
+
+.chat-input-zone {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    align-items: flex-end;
+}
+
+.chat-input-zone textarea {
+    flex: 1;
+    resize: none;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    padding: 12px;
+    font-family: inherit;
+    outline: none;
+}
+
+.chat-input-zone textarea:focus {
+    border-color: #2563eb;
+}
+
+.chat-input-zone button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-vide {
+    text-align: center;
+    color: #64748b;
+}
+
+
+/* =====================================================
+   GRAND ÉCRAN
+===================================================== */
+
+@media (min-width: 1100px) {
+
+    .client-container {
+        max-width: 1100px;
+    }
+
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fast Trajet - Connexion chauffeur</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<main class="auth-page">
+
+    <section class="auth-card">
+
+        <div class="logo">
+            🚕
+        </div>
+
+        <h1>Connexion chauffeur</h1>
+
+        <p class="subtitle">
+            Accédez à votre espace chauffeur
+        </p>
+
+        <form id="connexionForm">
+
+            <div class="field">
+
+                <label for="identifiant">
+                    E-mail ou téléphone
+                </label>
+
+                <input
+                    type="text"
+                    id="identifiant"
+                    name="identifiant"
+                    placeholder="Votre e-mail ou téléphone"
+                    autocomplete="username"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="mot_de_passe">
+                    Mot de passe
+                </label>
+
+                <input
+                    type="password"
+                    id="mot_de_passe"
+                    name="mot_de_passe"
+                    placeholder="Votre mot de passe"
+                    autocomplete="current-password"
+                    required
+                >
+
+            </div>
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+            <button
+                type="submit"
+                id="submitButton"
+                class="main-button"
+            >
+                Se connecter
+            </button>
+
+        </form>
+
+        <p class="switch-link">
+
+            Pas encore chauffeur ?
+
+            <a href="inscription.html">
+                Créer un compte chauffeur
+            </a>
+
+        </p>
+
+    </section>
+
+</main>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

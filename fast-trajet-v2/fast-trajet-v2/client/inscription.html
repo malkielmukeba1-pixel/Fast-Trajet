@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fast Trajet - Inscription client</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<main class="auth-page">
+
+    <section class="auth-card">
+
+        <div class="logo">
+            👤
+        </div>
+
+        <h1>Créer un compte</h1>
+
+        <p class="subtitle">
+            Rejoignez Fast Trajet
+        </p>
+
+        <form id="inscriptionForm">
+
+            <div class="field">
+
+                <label for="nom">
+                    Nom
+                </label>
+
+                <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="prenom">
+                    Prénom
+                </label>
+
+                <input
+                    type="text"
+                    id="prenom"
+                    name="prenom"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="telephone">
+                    Téléphone
+                </label>
+
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    placeholder="Ex. 0990000001"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="date_naissance">
+                    Date de naissance
+                </label>
+
+                <input
+                    type="date"
+                    id="date_naissance"
+                    name="date_naissance"
+                    required
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="sexe">
+                    Sexe
+                </label>
+
+                <select
+                    id="sexe"
+                    name="sexe"
+                    required
+                >
+
+                    <option value="">
+                        Sélectionner
+                    </option>
+
+                    <option value="homme">
+                        Homme
+                    </option>
+
+                    <option value="femme">
+                        Femme
+                    </option>
+
+                    <option value="autre">
+                        Autre
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="field">
+
+                <label for="mot_de_passe">
+                    Mot de passe
+                </label>
+
+                <input
+                    type="password"
+                    id="mot_de_passe"
+                    name="mot_de_passe"
+                    minlength="8"
+                    placeholder="8 caractères minimum"
+                    required
+                >
+
+            </div>
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+            <button
+                type="submit"
+                id="submitButton"
+                class="main-button"
+            >
+                Créer mon compte
+            </button>
+
+        </form>
+
+        <p class="switch-link">
+
+            Déjà inscrit ?
+
+            <a href="connexion.html">
+                Se connecter
+            </a>
+
+        </p>
+
+    </section>
+
+</main>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

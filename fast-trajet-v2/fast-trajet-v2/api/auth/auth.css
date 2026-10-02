@@ -1,0 +1,567 @@
+/* =========================================================
+   FAST TRAJET V2
+   AUTHENTIFICATION — DESIGN RESPONSIVE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaire: #0d6efd;
+    --primaire-fonce: #084298;
+    --vert: #16a34a;
+    --fond: #f4f7fb;
+    --blanc: #ffffff;
+    --texte: #172033;
+    --texte-secondaire: #667085;
+    --bordure: #d9dee8;
+    --danger: #dc2626;
+    --succes: #15803d;
+    --ombre: 0 20px 50px rgba(16, 24, 40, 0.10);
+    --rayon: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fond);
+    color: var(--texte);
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.auth-header {
+    max-width: 1150px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--texte);
+}
+
+.logo strong {
+    color: var(--primaire);
+}
+
+.logo-icon {
+    font-size: 32px;
+}
+
+.slogan {
+    margin-top: 7px;
+    color: var(--texte-secondaire);
+    font-size: 14px;
+}
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+   ========================================================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    background: var(--blanc);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+}
+
+/* =========================================================
+   PRÉSENTATION
+   ========================================================= */
+
+.auth-presentation {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        145deg,
+        #eaf3ff,
+        #f8fbff
+    );
+}
+
+.presentation-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blanc);
+    border-radius: 16px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.auth-presentation h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.auth-presentation h1 strong {
+    color: var(--primaire);
+}
+
+.auth-presentation > p {
+    max-width: 500px;
+    color: var(--texte-secondaire);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* =========================================================
+   AVANTAGES
+   ========================================================= */
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.advantage > span {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blanc);
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.advantage div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.advantage strong {
+    font-size: 14px;
+}
+
+.advantage small {
+    color: var(--texte-secondaire);
+    font-size: 12px;
+}
+
+/* =========================================================
+   CARTE AUTHENTIFICATION
+   ========================================================= */
+
+.auth-card {
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =========================================================
+   CHOIX DU PROFIL
+   ========================================================= */
+
+.role-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 5px;
+    background: #f1f4f8;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.role-button {
+    border: none;
+    background: transparent;
+    padding: 12px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--texte-secondaire);
+    transition: 0.2s ease;
+}
+
+.role-button:hover {
+    color: var(--texte);
+}
+
+.role-button.active {
+    background: var(--blanc);
+    color: var(--primaire);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.auth-title {
+    margin-bottom: 25px;
+}
+
+.auth-title h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.auth-title p {
+    color: var(--texte-secondaire);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   FORMULAIRE
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--bordure);
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 14px;
+    outline: none;
+    background: var(--blanc);
+    color: var(--texte);
+    transition: 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primaire);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.10);
+}
+
+.form-group input::placeholder {
+    color: #98a2b3;
+}
+
+/* =========================================================
+   MOT DE PASSE
+   ========================================================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 50px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.toggle-password:hover {
+    background: #f2f4f7;
+}
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.auth-message {
+    display: none;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.auth-message.show {
+    display: block;
+}
+
+.auth-message.error {
+    color: var(--danger);
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.auth-message.success {
+    color: var(--succes);
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+/* =========================================================
+   BOUTON PRINCIPAL
+   ========================================================= */
+
+.main-button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primaire);
+    color: var(--blanc);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.main-button:hover {
+    background: var(--primaire-fonce);
+    transform: translateY(-1px);
+}
+
+.main-button:active {
+    transform: translateY(0);
+}
+
+.main-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================================================
+   INSCRIPTION
+   ========================================================= */
+
+.register-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.register-section p {
+    color: var(--texte-secondaire);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.secondary-button {
+    border: none;
+    background: transparent;
+    color: var(--primaire);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.secondary-button:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   RETOUR
+   ========================================================= */
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: var(--texte-secondaire);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    color: var(--primaire);
+}
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .auth-presentation {
+        padding: 40px;
+    }
+
+    .auth-presentation h1 {
+        font-size: 34px;
+    }
+
+    .advantages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .auth-card {
+        padding: 40px;
+    }
+}
+
+/* =========================================================
+   SMARTPHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .auth-page {
+        padding: 15px 10px;
+    }
+
+    .auth-header {
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .logo-icon {
+        font-size: 27px;
+    }
+
+    .auth-container {
+        border-radius: 15px;
+        min-height: auto;
+    }
+
+    .auth-presentation {
+        padding: 30px 25px;
+    }
+
+    .presentation-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 23px;
+        margin-bottom: 18px;
+    }
+
+    .auth-presentation h1 {
+        font-size: 29px;
+    }
+
+    .auth-presentation > p {
+        font-size: 14px;
+    }
+
+    .advantages {
+        display: flex;
+        gap: 14px;
+        margin-top: 25px;
+    }
+
+    .advantage > span {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .auth-card {
+        padding: 30px 20px;
+    }
+
+    .auth-title h2 {
+        font-size: 23px;
+    }
+
+    .form-group input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .main-button {
+        height: 52px;
+        font-size: 15px;
+    }
+}
+
+/* =========================================================
+   PETITS SMARTPHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .auth-page {
+        padding: 10px 7px;
+    }
+
+    .auth-presentation {
+        padding: 25px 18px;
+    }
+
+    .auth-card {
+        padding: 25px 16px;
+    }
+
+    .auth-presentation h1 {
+        font-size: 26px;
+    }
+
+    .advantages {
+        gap: 12px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, 0.25);
+    outline-offset: 2px;
+}

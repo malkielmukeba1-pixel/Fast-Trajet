@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        #f3f4f6;
+
+    color:
+        #111827;
+}
+
+.connexion-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.connexion-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: #ffffff;
+
+    padding: 35px 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.logo {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background:
+        #111827;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+.sous-titre {
+
+    margin-top: 5px;
+
+    margin-bottom: 28px;
+
+    color:
+        #6b7280;
+}
+
+.champ {
+
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+.champ label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.champ input {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.champ input:focus {
+
+    border-color:
+        #111827;
+}
+
+#connexionButton {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        #111827;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+}
+
+#connexionButton:disabled {
+
+    opacity: 0.6;
+
+    cursor:
+        not-allowed;
+}
+
+.message {
+
+    min-height: 20px;
+
+    margin: 10px 0;
+
+    font-size: 14px;
+
+    color:
+        #dc2626;
+}
+
+@media (max-width: 480px) {
+
+    .connexion-card {
+
+        padding:
+            28px 20px;
+
+    }
+
+    h1 {
+
+        font-size:
+            24px;
+
+    }
+}
